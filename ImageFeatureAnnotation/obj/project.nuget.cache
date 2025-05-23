@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "24x2hbYRS8o=",
+  "success": true,
+  "projectFilePath": "D:\\Github\\repos\\ImageFeatureAnnotation\\ImageFeatureAnnotation\\ImageFeatureAnnotation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\薛瑞雷\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22000.57\\microsoft.windows.sdk.net.ref.10.0.22000.57.nupkg.sha512"
+  ],
+  "logs": []
+}
