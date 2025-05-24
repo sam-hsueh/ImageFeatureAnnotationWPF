@@ -305,19 +305,17 @@ namespace ImageFeatureAnnotation
                     {
                         List<Point> fpoints = this.mwv.FeatureList[index1].FPoints;
                         Graphics graphics2 = graphics1;
-                        System.Drawing.Color[] primaryColor1 = this.PrimaryColor;
                         int? cat = this.mwv.FeatureList[index1].Cat;
-                        int index2 = cat.Value;
-                        System.Drawing.Pen pen = new System.Drawing.Pen(primaryColor1[index2], 3f);
+                        int index2 = cat.Value % PrimaryColor.Length;
+                        System.Drawing.Pen pen = new System.Drawing.Pen(PrimaryColor[index2], 3f);
                         Point[] array1 = this.mwv.FeatureList[index1].FPoints.ToArray();
                         graphics2.DrawPolygon(pen, array1);
                         for (int index3 = 0; index3 < this.mwv.FeatureList[index1].FPoints.Count; ++index3)
                         {
                             Graphics graphics3 = graphics1;
-                            System.Drawing.Color[] primaryColor2 = this.PrimaryColor;
                             cat = this.mwv.FeatureList[index1].Cat;
-                            int index4 = cat.Value;
-                            SolidBrush solidBrush = new SolidBrush(primaryColor2[index4]);
+                            int index4 = cat.Value % PrimaryColor.Length;
+                            SolidBrush solidBrush = new SolidBrush(PrimaryColor[index4]);
                             fpoint = this.mwv.FeatureList[index1].FPoints[index3];
                             double x1 = (double)(fpoint.X - 4);
                             fpoint = this.mwv.FeatureList[index1].FPoints[index3];
@@ -328,10 +326,9 @@ namespace ImageFeatureAnnotation
                         if (this.mwv.FeatureList[index1].Shape == 0)
                         {
                             Graphics graphics4 = graphics1;
-                            System.Drawing.Color[] primaryColor3 = this.PrimaryColor;
                             cat = this.mwv.FeatureList[index1].Cat;
-                            int index5 = cat.Value;
-                            SolidBrush solidBrush = new SolidBrush(primaryColor3[index5]);
+                            int index5 = cat.Value % PrimaryColor.Length;
+                            SolidBrush solidBrush = new SolidBrush(PrimaryColor[index5]);
                             fpoint = this.mwv.FeatureList[index1].FPoints[0];
                             int x2 = fpoint.X;
                             fpoint = this.mwv.FeatureList[index1].FPoints[1];
@@ -348,10 +345,9 @@ namespace ImageFeatureAnnotation
                         if (this.SelectedF == index1)
                         {
                             Graphics graphics5 = graphics1;
-                            System.Drawing.Color[] primaryColor4 = this.PrimaryColor;
                             cat = this.mwv.FeatureList[index1].Cat;
-                            int index6 = cat.Value;
-                            SolidBrush solidBrush = new SolidBrush(this.GetAlphaColor(primaryColor4[index6], 100));
+                            int index6 = cat.Value % PrimaryColor.Length;
+                            SolidBrush solidBrush = new SolidBrush(this.GetAlphaColor(PrimaryColor[index6], 100));
                             Point[] array2 = this.mwv.FeatureList[this.SelectedF].FPoints.ToArray();
                             graphics5.FillPolygon((System.Drawing.Brush)solidBrush, array2);
                         }
@@ -360,10 +356,9 @@ namespace ImageFeatureAnnotation
                             if (this.HoverF != this.SelectedF)
                             {
                                 Graphics graphics6 = graphics1;
-                                System.Drawing.Color[] primaryColor5 = this.PrimaryColor;
                                 cat = this.mwv.FeatureList[index1].Cat;
-                                int index7 = cat.Value;
-                                SolidBrush solidBrush = new SolidBrush(this.GetAlphaColor(primaryColor5[index7], 100));
+                                int index7 = cat.Value % PrimaryColor.Length;
+                                SolidBrush solidBrush = new SolidBrush(this.GetAlphaColor(PrimaryColor[index7], 100));
                                 Point[] array3 = this.mwv.FeatureList[this.HoverF].FPoints.ToArray();
                                 graphics6.FillPolygon((System.Drawing.Brush)solidBrush, array3);
                             }
@@ -1289,7 +1284,7 @@ namespace ImageFeatureAnnotation
 
         private void ContextMenuSharp_Click(object sender, RoutedEventArgs e) => this.SelectedF = -1;
 
-        private System.Drawing.Color[] PrimaryColor => new System.Drawing.Color[20]
+        Color[] PrimaryColor => new Color[]
         {
       System.Drawing.Color.Red,
       System.Drawing.Color.Lime,

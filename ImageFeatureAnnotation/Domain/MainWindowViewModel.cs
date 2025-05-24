@@ -26,8 +26,13 @@ namespace ImageFeatureAnnotation.Domain
         ObservableCollection<int> _CatFeatures;
         public ObservableCollection<int> CatFeatures
         {
-            set;
-            get;
-        } = new ObservableCollection<int>(new List<int> { 0, 1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19 });
+            get
+            {
+                var arr = new ObservableCollection<int>();
+                for (int i = 0; i < 100; i++)
+                    arr.Add(i);
+                return arr;
+            }
+        }
     }
 }

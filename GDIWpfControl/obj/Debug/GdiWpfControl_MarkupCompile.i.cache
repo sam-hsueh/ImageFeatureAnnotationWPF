@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\ImageFeatureAnnotation\WeldFeatureDetection\GDIWpfControl\obj\Debug\
+D:\Github\repos\ImageFeatureAnnotationWPF\GDIWpfControl\obj\Debug\
 GdiWpfControl
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 1-118364768
 
 8-1235278524
-28-1285867233
+28-1548119437
 GDIControlWPF.xaml;
 
 True

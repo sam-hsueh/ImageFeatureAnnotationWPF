@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\repos\\ImageFeatureAnnotation\\ImageFeatureAnnotation\\ImageFeatureAnnotation.csproj",
+      "projectUniqueName": "D:\\Github\\repos\\ImageFeatureAnnotationWPF\\ImageFeatureAnnotation\\ImageFeatureAnnotation.csproj",
       "projectName": "ImageFeatureAnnotation",
-      "projectPath": "D:\\Github\\repos\\ImageFeatureAnnotation\\ImageFeatureAnnotation\\ImageFeatureAnnotation.csproj",
+      "projectPath": "D:\\Github\\repos\\ImageFeatureAnnotationWPF\\ImageFeatureAnnotation\\ImageFeatureAnnotation.csproj",
       "packagesPath": "C:\\Users\\薛瑞雷\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\repos\\ImageFeatureAnnotation\\ImageFeatureAnnotation\\obj\\",
+      "outputPath": "D:\\Github\\repos\\ImageFeatureAnnotationWPF\\ImageFeatureAnnotation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "net8.0-windows10.0.22000": {
           "targetAlias": "net8.0-windows10.0.22000.0",
           "projectReferences": {
-            "D:\\Github\\repos\\ImageFeatureAnnotation\\GDIWpfControl\\GDIWpfControl.csproj": {
-              "projectPath": "D:\\Github\\repos\\ImageFeatureAnnotation\\GDIWpfControl\\GDIWpfControl.csproj"
+            "D:\\Github\\repos\\ImageFeatureAnnotationWPF\\GDIWpfControl\\GDIWpfControl.csproj": {
+              "projectPath": "D:\\Github\\repos\\ImageFeatureAnnotationWPF\\GDIWpfControl\\GDIWpfControl.csproj"
             }
           }
         }
